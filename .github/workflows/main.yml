@@ -1,0 +1,57 @@
+name: Track NimbusPost Page
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"   # every 5 minutes
+  workflow_dispatch:
+
+jobs:
+  check_page:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # required for pushing changes
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Fetch NimbusPost page
+        run: |
+          curl -s "https://ship.nimbuspost.com/shipping/tracking/90206126382" > page.html
+
+      - name: Check if main1.html exists
+        id: check_file
+        run: |
+          if [ -f main1.html ]; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Compare with main1.html
+        id: compare
+        if: steps.check_file.outputs.exists == 'true'
+        run: |
+          if diff -q main1.html page.html > /dev/null; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Update repo (first run or changes detected)
+        if: steps.check_file.outputs.exists == 'false' || steps.compare.outputs.changed == 'true'
+        run: |
+          mv -f page.html main1.html
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add main1.html
+          git commit -m "Update tracking page snapshot" || echo "No changes to commit"
+          git push
+
+      - name: Send Telegram notification
+        if: steps.compare.outputs.changed == 'true'
+        run: |
+          curl -s -X POST https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage \
+            -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} \
+            -d text="🚨 NimbusPost tracking page changed! https://ship.nimbuspost.com/shipping/tracking/90206126382"
