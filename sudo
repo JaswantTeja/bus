@@ -1,0 +1,2 @@
+#!/bin/bash
+java -jar /workspaces/bus/apktool.jar "$@" /usr/local/bin/apktool
