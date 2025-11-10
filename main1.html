@@ -1,0 +1,318 @@
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name=”robots” content=”noindex, nofollow”>
+  <title>Order Tracking</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <!-- Favicons -->
+  <link href="https://dqtccm62inm81.cloudfront.net/assets/img/favicon.png" rel="icon">
+  <link href="https://dqtccm62inm81.cloudfront.net/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="https://dqtccm62inm81.cloudfront.net/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://dqtccm62inm81.cloudfront.net/assets/css/atmos.min.css">
+
+  
+  <!-- Template Main CSS File -->
+  <link href="https://dqtccm62inm81.cloudfront.net/assets/css/tracking_page.css" rel="stylesheet">
+  <link href='https://use.fontawesome.com/releases/v5.7.2/css/all.css' rel='stylesheet'>
+  <script src="https://dqtccm62inm81.cloudfront.net/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="https://dqtccm62inm81.cloudfront.net/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://dqtccm62inm81.cloudfront.net/assets/fonts/materialdesignicons/materialdesignicons.min.css">
+  <style>
+    .custom_navbar{
+      background: #fff;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .custom_navbar .navbar-brand{
+      width: 200px;
+    }
+    .custom_navbar .navbar-brand img{
+      max-width: 100%;
+      height: 60px;
+    }
+    @media(max-width: 991px){
+      .custom_navbar .navbar-toggler{
+        display: block;
+        border-color: #000;
+      }
+      .custom_navbar .navbar-toggler span{
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+      }
+      .custom_navbar .collapse:not(.show) {
+        display: none!important;
+      }
+      .custom_navbar .navbar-collapse{
+        width: 100%;
+        flex-basis: 100%;
+      }
+    }
+  @media(max-width: 575px){
+    .body-wrapper{
+      display:flex;
+      flex-wrap: wrap;
+    }
+    .small_banner .col-xs-12:not(:last-child){
+      margin-bottom: 15px;
+    }
+    header{
+      order:0;
+      width:100%;
+    }
+    .small_banner{
+      order:2;
+      width:100%;
+    }
+    .status-delivery{
+      order:1;
+      width:100%;
+    }
+    footer{
+      order:3;
+      width:100%;
+    }
+  }
+  @media(max-width: 767px){
+    .footer_box{
+      flex-wrap: wrap;
+    }
+    .footer_box .footer_left{
+      width:100%;
+      margin-bottom:15px;
+      text-align:center;
+    }
+    .footer_box .footer_logo{
+      width:100%;
+      justify-content:center;
+    }
+  }
+  @media(max-width: 480px){
+    .track{
+      height:auto;
+      flex-wrap:wrap;
+      margin-bottom: 0;
+    }
+    .track .step{
+      width:100%;
+      text-align:left;
+      margin-top:0;
+      margin-bottom: 30px;
+      display:flex;
+      align-items:center;
+    }
+    .track .step .icon{
+      text-align:center;
+      margin-right:10px;
+    }
+    .track .step .text{
+      margin-top:0;
+    }
+    .track .step:before{
+      left: -13px!important;
+      width: 55px;
+      top: 42px;
+      transform: rotate(90deg);
+    }
+    .shipment_progress{
+      padding-top:0;
+      margin-top:0!important;
+    }
+  }
+ </style>
+</head>
+
+<body> 
+ 
+<div class="body-wrapper">
+  <!-- ======= Header ======= -->
+  <header class="mb-3">
+    <div class="container">
+        <nav class="navbar navbar-expand-md custom_navbar">
+          <!-- Brand -->
+          
+          <!-- Toggler/collapsibe Button -->
+          
+          <!-- Navbar links -->
+          <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                          </ul>
+          </div>
+        </nav>
+    </div>
+  </header><!-- End Header -->
+
+  
+  <div class="status-delivery mb-3">
+    <div class="container">
+      <div class="row">
+          <div class="col-md-12 col-lg-4 d-flex m-b-20 mb-lg-0">
+            <div style="background: #fff; width: 100%;">
+                         <div class="status-delivery-heading"> Estimated Delivery</div>
+            <div class="status-delivery-box">
+                        <div class="day">Monday</div>
+            <div class="date align-items-center d-flex"><span>01</span>  2025</div>
+          
+             <div class="ready_to_go">Delivered</div>
+            <div class="track_con mt-2">            </div>
+            
+            <ul class="track_details">
+                <li><span>ORDER PLACED ON :</span> Aug 28, 2025 16:12 </li>
+                <li><span>COURIER :</span>  Bluedart</li>
+                <li><span>TRACKING ID :</span>  90206126382</li>
+                <li><span>ORDER ID :</span>  1756377625PRASNT</li>
+            </ul>
+                          </div>
+          </div>
+        </div>
+          
+          <div class="col-md-12 col-lg-8">
+            <div class="status-delivery-heading">Status Delivery</div>
+            <div class="status-delivery-box">
+            <h3>Delivered</h3> 
+                        
+            <div class="track">
+              <div class='step active'><span class='icon'>  <i class='fa fa-check'></i></span><span class='text'>Booked</span></div><div class='step active'><span class='icon'>  <i class='fa fa-check'></i></span><span class='text'>Pending Pickup</span></div><div class='step active'><span class='icon'>  <i class='fa fa-check'></i></span><span class='text'>Picked</span></div><div class='step active'><span class='icon'>  <i class='fa fa-check'></i></span><span class='text'>In Transit</span></div><div class='step active'><span class='icon'>  <i class='fa fa-check'></i></span><span class='text'>Rad</span></div><div class='step active'><span class='icon'>  <i class='fa fa-check'></i></span><span class='text'>Out For Delivery</span></div><div class='step current last'><span class='icon'>  <i class='fa fa-truck'></i></span><span class='text'>Delivered</span></div>               </div>           
+            
+            
+            <div class="shipment_progress mt-4"><h4>Shipment Progress</h4></div>
+                <ul class="step-progress scrollbar" id="style-4">
+                                                <li class="step-progress-item is-done">
+                        <div class="progress_content">
+                        <p>Aug 31, 2025 12:55</p>
+                        <p><strong></strong></p>
+                        <p>AMALAPURAM (APM) <small>(SHIPMENT DELIVERED)</small></p>
+                        </div>
+                        </li>
+                                                <li class="step-progress-item is-done">
+                        <div class="progress_content">
+                        <p>Aug 31, 2025 12:54</p>
+                        <p><strong></strong></p>
+                        <p>AMALAPURAM (APM) <small>(SHIPMENT OUTSCAN)</small></p>
+                        </div>
+                        </li>
+                                                <li class="step-progress-item is-done">
+                        <div class="progress_content">
+                        <p>Aug 31, 2025 12:03</p>
+                        <p><strong></strong></p>
+                        <p>AMALAPURAM (APM) <small>(SHIPMENT INSCAN)</small></p>
+                        </div>
+                        </li>
+                                                <li class="step-progress-item is-done">
+                        <div class="progress_content">
+                        <p>Aug 31, 2025 07:08</p>
+                        <p><strong></strong></p>
+                        <p>RAJAHMUNDHRY HUB (RYH) <small>(SHIPMENT OUTSCANNED TO NETWORK)</small></p>
+                        </div>
+                        </li>
+                                                <li class="step-progress-item is-done">
+                        <div class="progress_content">
+                        <p>Aug 31, 2025 05:04</p>
+                        <p><strong></strong></p>
+                        <p>RAJAHMUNDHRY HUB (RYH) <small>(MIXED CANVAS BAG SCANNED)</small></p>
+                        </div>
+                        </li>
+                                                <li class="step-progress-item is-done">
+                        <div class="progress_content">
+                        <p>Aug 31, 2025 03:54</p>
+                        <p><strong></strong></p>
+                        <p>RAJAHMUNDHRY HUB (RYH) <small>(COMM FLIGHT,VEH/TRAIN; DELAYED/CANCELLED)</small></p>
+                        </div>
+                        </li>
+                                                <li class="step-progress-item is-done">
+                        <div class="progress_content">
+                        <p>Aug 30, 2025 17:41</p>
+                        <p><strong></strong></p>
+                        <p>HYDERABAD HUB (HHB) <small>(SHIPMENT OUTSCANNED TO NETWORK)</small></p>
+                        </div>
+                        </li>
+                                                <li class="step-progress-item is-done">
+                        <div class="progress_content">
+                        <p>Aug 30, 2025 08:05</p>
+                        <p><strong></strong></p>
+                        <p>HYDERABAD HUB (HHB) <small>(DIRECT CANVAS BAG SCANNED)</small></p>
+                        </div>
+                        </li>
+                                                <li class="step-progress-item is-done">
+                        <div class="progress_content">
+                        <p>Aug 30, 2025 04:52</p>
+                        <p><strong></strong></p>
+                        <p>DELHI OFFSITE HUB (DOH) <small>(SHIPMENT OUTSCANNED TO NETWORK)</small></p>
+                        </div>
+                        </li>
+                                                <li class="step-progress-item is-done">
+                        <div class="progress_content">
+                        <p>Aug 29, 2025 05:47</p>
+                        <p><strong></strong></p>
+                        <p>DELHI OFFSITE HUB (DOH) <small>(DIRECT CANVAS BAG SCANNED)</small></p>
+                        </div>
+                        </li>
+                                                <li class="step-progress-item is-done">
+                        <div class="progress_content">
+                        <p>Aug 29, 2025 03:18</p>
+                        <p><strong></strong></p>
+                        <p>GURGAON CPC (GGE) <small>(SHIPMENT OUTSCANNED TO NETWORK)</small></p>
+                        </div>
+                        </li>
+                                                <li class="step-progress-item is-done">
+                        <div class="progress_content">
+                        <p>Aug 28, 2025 23:57</p>
+                        <p><strong></strong></p>
+                        <p>GURGAON CPC (GGE) <small>(SHIPMENT INSCAN)</small></p>
+                        </div>
+                        </li>
+                                                <li class="step-progress-item is-done">
+                        <div class="progress_content">
+                        <p>Aug 28, 2025 18:57</p>
+                        <p><strong></strong></p>
+                        <p>GURGAON CPC (GGE) <small>(PICK UP SCAN ON FIELD)</small></p>
+                        </div>
+                        </li>
+                                                <li class="step-progress-item is-done">
+                        <div class="progress_content">
+                        <p>Aug 28, 2025 16:13</p>
+                        <p><strong></strong></p>
+                        <p>GURUGRAM (CTY) <small>(Online shipment booked)</small></p>
+                        </div>
+                        </li>
+                                        </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <footer class="m-b-10">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="footer_box">
+            <div class="footer_left">
+                            <span class="m-r-10">
+                              </span>
+              <span>
+                              </span>
+            </div>
+            <div class="footer_logo d-flex align-items-center">
+              <p class="m-r-10 mb-0">Powered by: </p>
+              <img src="https://dqtccm62inm81.cloudfront.net/assets/tracking_page/images/footer_logo.png"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+
+</html>
